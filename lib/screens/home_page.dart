@@ -10,21 +10,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Color themeColor = Colors.blue;
+
+  void changeColor({required Color color}) {
+    setState(() {
+      themeColor = color;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: themeColor,
       appBar: AppBar(
-        title: Text(
-          'Profile',
-        ),
+        title: Text('Profile'),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
       body: Padding(
         padding: EdgeInsets.all(30),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 95.0,
@@ -32,21 +37,20 @@ class _HomePageState extends State<HomePage> {
                 'images/dash.jpg',
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ]),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.25),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
               padding: EdgeInsets.symmetric(horizontal: 25, vertical: 50),
               child: Column(
                 children: [
@@ -64,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                       child: ListTile(
                         leading: Icon(
                           Icons.phone,
-                          color: Colors.blueAccent,
+                          color: themeColor,
                         ),
                         title: Text(
                           '+966 55 123 456',
@@ -74,27 +78,26 @@ class _HomePageState extends State<HomePage> {
                         ),
                       )),
                   Card(
-                      elevation: 0,
-                      margin:
-                          EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-                      child: ListTile(
-                        leading: Icon(
-                          Icons.email,
-                          color: Colors.blueAccent,
+                    elevation: 0,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: themeColor,
+                      ),
+                      title: Text(
+                        'Nouf@gmail.com',
+                        style: TextStyle(
+                          fontSize: 20.0,
                         ),
-                        title: Text(
-                          'Nouf@gmail.com',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      )),
-                  SizedBox(
-                    height: 20,
+                      ),
+                    ),
                   ),
+                  SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueAccent,
+                        backgroundColor: themeColor,
                         padding:
                             EdgeInsets.symmetric(horizontal: 30, vertical: 15)),
                     onPressed: () {},
@@ -121,32 +124,38 @@ class _HomePageState extends State<HomePage> {
                   ]),
               padding: EdgeInsets.all(20),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                          color: Colors.redAccent,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                          color: Colors.greenAccent,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                          color: Colors.blueAccent,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                  ]),
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ColorButton(color: Colors.green, changeColor: changeColor),
+                  ColorButton(
+                      color: Colors.redAccent, changeColor: changeColor),
+                  ColorButton(color: Colors.blue, changeColor: changeColor)
+                ],
+              ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ColorButton extends StatelessWidget {
+  final Color color;
+  final void Function({required Color color}) changeColor;
+  const ColorButton(
+      {super.key, required this.color, required this.changeColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => changeColor(color: color),
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     );
