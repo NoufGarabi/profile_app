@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // ==========| Joud Code |==========
   Color themeColor = Colors.blue;
 
   void changeColor({required Color color}) {
@@ -17,7 +18,9 @@ class _HomePageState extends State<HomePage> {
       themeColor = color;
     });
   }
+  // ==================================
 
+  // ==========| Nouf Code |==========
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,6 +105,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
+            // =============================
+
+            // ==========| Joud Code |==========
             Spacer(),
             Container(
               decoration: BoxDecoration(
@@ -126,7 +133,8 @@ class _HomePageState extends State<HomePage> {
                   ColorButton(color: Colors.blue, changeColor: changeColor)
                 ],
               ),
-            )
+            ),
+            // ==============================
           ],
         ),
       ),
@@ -134,6 +142,9 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+// ==========| Joud Code |==========
+
+//  Creating custom widget
 class ColorButton extends StatelessWidget {
   final Color color;
   final void Function({required Color color}) changeColor;
@@ -155,3 +166,4 @@ class ColorButton extends StatelessWidget {
     );
   }
 }
+// ===================================

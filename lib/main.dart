@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:profile_app/screens/home_page.dart';
 import 'package:profile_app/screens/share_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
+// ==========| Reem Code |==========
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
