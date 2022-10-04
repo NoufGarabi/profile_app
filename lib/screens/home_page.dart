@@ -33,9 +33,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             CircleAvatar(
               radius: 95.0,
-              backgroundImage: AssetImage(
-                'images/dash.jpg',
-              ),
+              backgroundImage: AssetImage('images/dash.jpg'),
             ),
             const SizedBox(height: 10),
             Container(
@@ -58,25 +56,22 @@ class _HomePageState extends State<HomePage> {
                     "Nouf Algarabi",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: 20),
                   Card(
-                      elevation: 0,
-                      margin:
-                          EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-                      child: ListTile(
-                        leading: Icon(
-                          Icons.phone,
-                          color: themeColor,
-                        ),
-                        title: Text(
-                          '+966 55 123 456',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      )),
+                    elevation: 0,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: themeColor,
+                      ),
+                      title: Text(
+                        '+966 55 123 456',
+                        style: TextStyle(fontSize: 20.0),
+                      ),
+                    ),
+                  ),
                   Card(
                     elevation: 0,
                     margin:
@@ -88,9 +83,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       title: Text(
                         'Nouf@gmail.com',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                        ),
+                        style: TextStyle(fontSize: 20.0),
                       ),
                     ),
                   ),
@@ -100,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                         backgroundColor: themeColor,
                         padding:
                             EdgeInsets.symmetric(horizontal: 30, vertical: 15)),
-                    onPressed: () {},
+                    onPressed: () => Navigator.pushNamed(context, 'share'),
                     child: Text(
                       'Share',
                       style: TextStyle(fontSize: 18),
@@ -112,16 +105,17 @@ class _HomePageState extends State<HomePage> {
             Spacer(),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ]),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.25),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
               padding: EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': (context) => HomePage(),
-        'second': (context) => SharePage(),
+        'share': (context) => SharePage(),
       },
     );
   }
