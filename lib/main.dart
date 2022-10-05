@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:profile_app/screens/profile_page.dart';
 import 'package:profile_app/screens/home_page.dart';
-import 'package:profile_app/screens/share_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': (context) => HomePage(),
-        'share': (context) => SharePage(),
+        'profile': (context) => ProfilePage(),
       },
     );
   }
