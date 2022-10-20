@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_app/screens/profile_page.dart';
 
-// ==========| Reem Code |==========
 class HomePage extends StatelessWidget {
   final _name = TextEditingController();
   final _phone = TextEditingController();
@@ -22,7 +21,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 20.0),
             Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               child: Column(
                 children: [
                   TextField(
@@ -32,21 +31,25 @@ class HomePage extends StatelessWidget {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     controller: _phone,
                     decoration: InputDecoration(
-                        hintText: "Phone Number",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
+                      hintText: "Phone Number",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   TextField(
                     controller: _email,
                     decoration: InputDecoration(
-                        hintText: "Email",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
+                      hintText: "Email",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -65,9 +68,10 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => ProfilePage(
-                        name: _name.text,
-                        phone: _phone.text,
-                        email: _email.text),
+                      name: _name.text,
+                      phone: _phone.text,
+                      email: _email.text,
+                    ),
                   ),
                 );
               },

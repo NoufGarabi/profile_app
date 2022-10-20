@@ -1,11 +1,8 @@
-// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:profile_app/screens/profile_page.dart';
 import 'package:profile_app/screens/home_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
-// ==========| Reem Code |==========
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,11 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My Profile',
-      initialRoute: 'home',
-      routes: {
-        'home': (context) => HomePage(),
-        'profile': (context) => ProfilePage(),
-      },
+      home: HomePage(),
     );
   }
 }
