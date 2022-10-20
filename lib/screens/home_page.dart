@@ -57,23 +57,21 @@ class HomePage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               ),
-              onPressed: () {
-                Navigator.of(context)
-                    .push(
-                      MaterialPageRoute(
-                        builder: (context) => ProfilePage(
-                            name: _name.text,
-                            phone: _phone.text,
-                            email: _email.text),
-                      ),
-                    )
-                    .then((value) {});
-              },
               child: const Text(
                 'Go to my Profile Page',
                 style: TextStyle(fontSize: 18),
               ),
-            )
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(
+                        name: _name.text,
+                        phone: _phone.text,
+                        email: _email.text),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
