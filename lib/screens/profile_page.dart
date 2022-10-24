@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
   String name, phone, email;
-  ProfilePage(
-      {super.key,
-      this.name = "Joud",
-      this.phone = "0598770066",
-      this.email = "Jeem.jamask@gmail.com"});
+  ProfilePage({
+    super.key,
+    this.name = 'Name',
+    this.phone = '0500000000',
+    this.email = 'example@gmail.com',
+  });
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();

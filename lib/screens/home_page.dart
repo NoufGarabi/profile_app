@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                   TextField(
                     controller: _name,
                     decoration: InputDecoration(
-                        hintText: "Full Name",
+                        hintText: 'Full Name',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                   TextField(
                     controller: _phone,
                     decoration: InputDecoration(
-                      hintText: "Phone Number",
+                      hintText: 'Phone Number',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                   TextField(
                     controller: _email,
                     decoration: InputDecoration(
-                      hintText: "Email",
+                      hintText: 'Email',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
