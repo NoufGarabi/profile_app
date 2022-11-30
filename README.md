@@ -1,16 +1,16 @@
-# profile_app
+## profile_app
+The Profile app is a beginner's app that functions as a portfolio and can change colors with a single tap. This software was intended to assist students at King Abdulaziz University in enhancing their flutter development abilities. Students were taught how to construct this app as part of the Google Students Developer Club series "Flutter Basics". 
 
-A new Flutter project.
+## Requirements
+- Flutte & Dart SDK
+- Emulator
 
 ## Getting Started
+```
+git clone https://github.com/NoufGarabi/profile_app
+cd profile_app
+flutter run
+```
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributions
+We encourage King Abdulaziz University students who have attended the course with us to demonstrate their abilities with flutter by contributing to this project. Fork this repository and report an issue; once accepted, you may submit a pull request. 
